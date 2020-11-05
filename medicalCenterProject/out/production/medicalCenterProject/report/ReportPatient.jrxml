@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportPatient" pageWidth="695" pageHeight="842" columnWidth="655" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a9d63374-83cc-4ee2-9ae4-4726b4b0a25b">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+<!--	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>-->
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[select * from patient cross join appointment on patient.Pid=appointment.Pid]]>
+	</queryString>
+	<field name="Pid" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Pid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="patient"/>
+	</field>
+	<field name="patient_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="patient_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="patient"/>
+	</field>
+	<field name="patient_dob" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="patient_dob"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="patient"/>
+	</field>
+	<field name="patient_address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="patient_address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="patient"/>
+	</field>
+	<field name="patient_telephone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="patient_telephone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="patient"/>
+	</field>
+	<field name="Eid" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Eid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="appointment"/>
+	</field>
+	<field name="Did" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Did"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="appointment"/>
+	</field>
+	<field name="COLUMN_8" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Pid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="appointment"/>
+	</field>
+	<field name="appointment_doctor_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="appointment_doctor_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="appointment"/>
+	</field>
+	<field name="appointment_date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="appointment_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="appointment"/>
+	</field>
+	<group name="Pid">
+		<groupExpression><![CDATA[$F{Pid}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="0" width="220" height="30" uuid="73c94567-1bb0-4269-ae3d-76d273bac565"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Patient Appoinment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-11" y="40" width="61" height="30" uuid="f6418aa7-5821-4c1e-99ab-24086693dd06"/>
+				<text><![CDATA[Pid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="40" width="80" height="30" uuid="0fa5ce69-6741-4b87-ba26-1dc89b2f5f7f"/>
+				<text><![CDATA[patient_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="40" width="70" height="30" uuid="54dee89c-9150-4b41-bf5b-bc5b4ff25a83"/>
+				<text><![CDATA[dob]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="40" width="85" height="30" uuid="dae89ec8-2525-4f52-b720-994db922a40a"/>
+				<text><![CDATA[address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="40" width="80" height="30" uuid="21a7b0e2-1122-412b-a390-36e34ff468ad"/>
+				<text><![CDATA[telephone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="40" width="60" height="30" uuid="24b43d2d-7903-4c2d-b19f-872489ec957a"/>
+				<text><![CDATA[Eid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="40" width="60" height="30" uuid="a8e90b45-d979-4cf7-99f7-a68b305b1ed1"/>
+				<text><![CDATA[Did]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="40" width="50" height="30" uuid="aacd06e5-0fa6-4e46-9cab-c0afc9f8edd5"/>
+				<text><![CDATA[Pid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="530" y="40" width="70" height="30" uuid="fe8d0d93-aa7b-45e2-aa1e-ee0b9ac43c9b"/>
+				<text><![CDATA[doctor name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="40" width="75" height="30" uuid="39f3c32c-c686-4cd2-b70a-c043efcf240a"/>
+				<text><![CDATA[date]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="49" splitType="Stretch">
+			<textField>
+				<reportElement x="-10" y="10" width="60" height="30" uuid="97a4aa03-534a-48c5-8b25-07ebd0bf10e9"/>
+				<textFieldExpression><![CDATA[$F{Pid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="10" width="80" height="30" uuid="fb1f9e07-dfa8-4c80-8755-d07817cd39c6"/>
+				<textFieldExpression><![CDATA[$F{patient_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="10" width="70" height="30" uuid="bc8ddc65-f087-4d57-b7e9-8e218dbad455"/>
+				<textFieldExpression><![CDATA[$F{patient_dob}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="10" width="85" height="30" uuid="1ef13bbe-d353-4b13-83f1-a1de3bb55b17"/>
+				<textFieldExpression><![CDATA[$F{patient_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="10" width="80" height="30" uuid="a2b09dbe-bc01-42ff-aab6-ff2e41749057"/>
+				<textFieldExpression><![CDATA[$F{patient_telephone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="10" width="60" height="30" uuid="766a5951-1849-4674-a6f0-05757c0336e9"/>
+				<textFieldExpression><![CDATA[$F{Eid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="10" width="60" height="30" uuid="731596bd-a733-4b58-92f7-c7e2d22fafb4"/>
+				<textFieldExpression><![CDATA[$F{Did}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="10" width="50" height="30" uuid="6883959c-b8a1-4fcf-9573-d506af215df3"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_8}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="530" y="10" width="70" height="30" uuid="b20bf07c-4eb3-4815-b54b-3e00c5c9e2e2"/>
+				<textFieldExpression><![CDATA[$F{appointment_doctor_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="10" width="75" height="30" uuid="a7a162c4-d904-4523-858a-80bc1861dd22"/>
+				<textFieldExpression><![CDATA[$F{appointment_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="-10" y="24" width="100" height="30" uuid="ea76a9f7-32b4-44d9-8440-671b56422351"/>
+				<text><![CDATA[make by shiran]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

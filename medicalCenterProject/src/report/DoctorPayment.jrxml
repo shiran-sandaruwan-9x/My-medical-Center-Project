@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DoctorPayment" pageWidth="595" pageHeight="342" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a61425d0-6487-4e97-839c-ad980efe3f98">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+<!--	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>-->
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="dname" class="java.lang.String"/>
+	<parameter name="bname" class="java.lang.String"/>
+	<parameter name="account" class="java.lang.Integer"/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="charge" class="java.lang.Double"/>
+	<queryString language="SQL">
+		<![CDATA[select * from doctor]]>
+	</queryString>
+	<field name="Did" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Did"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor"/>
+	</field>
+	<field name="doctor_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="doctor_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor"/>
+	</field>
+	<field name="type_ofDoctor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="type_ofDoctor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor"/>
+	</field>
+	<field name="doctor_InDay" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="doctor_InDay"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor"/>
+	</field>
+	<field name="doctor_InTime" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="doctor_InTime"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor"/>
+	</field>
+	<field name="doctor_dob" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="doctor_dob"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor"/>
+	</field>
+	<field name="doctor_tephone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="doctor_tephone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor"/>
+	</field>
+	<field name="doctor_qualification" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="doctor_qualification"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor"/>
+	</field>
+	<field name="doctor_channel_fee" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="doctor_channel_fee"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor"/>
+	</field>
+	<field name="doctor_email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="doctor_email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor"/>
+	</field>
+	<group name="Did">
+		<groupExpression><![CDATA[$F{Did}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="209" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="0" width="170" height="30" uuid="f5ff43ee-baa5-4b76-ab43-260bb49e5aef"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[doctor pay sheet]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="49" width="90" height="30" uuid="51654a20-34f7-414a-929f-49bfb8371134"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[doctor name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="120" width="90" height="30" uuid="73051d42-adc2-465c-ba6e-3fad0743efe7"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[bank name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="120" width="90" height="30" uuid="3be922c8-d4c2-4f33-a04f-64832aaecd8d"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[account no]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="51" width="80" height="30" uuid="81ca07b6-fba2-48f7-8deb-fce85d5379e0"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="50" width="100" height="30" uuid="95579944-7ed6-448e-a749-f1124aa6913b"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[full charge]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="81" width="90" height="30" uuid="fde08be0-c157-4c11-8cb8-1883d3f545ef"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="152" width="90" height="30" uuid="78b50b1c-5d7c-4bd3-9a8c-3742d551a878"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="151" width="90" height="30" uuid="3248a90f-4fca-452f-864b-e69e4e481388"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{account}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="82" width="80" height="30" uuid="d0ccd2c8-9c13-4157-827a-2aa9d3740a7d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="81" width="100" height="30" uuid="198817f4-7585-4902-ab32-bf073fd680ee"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{charge}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="510" y="80" width="42" height="30" uuid="5e1ed6d3-13d7-40b1-9686-5ed57586a4f9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rs//=]]></text>
+			</staticText>
+		</band>
+	</title>
+	<summary>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="4edfdfce-cc2a-457f-928f-6225131daa63"/>
+				<text><![CDATA[make by shiran]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

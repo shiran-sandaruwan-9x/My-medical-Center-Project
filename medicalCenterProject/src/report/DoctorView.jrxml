@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DoctorView" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="40a2fb3f-68c0-4ee1-ae42-393749d998a9">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+<!--	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>-->
+	<queryString language="SQL">
+		<![CDATA[select * from d_BankReport cross join doctor_payment on d_BankReport.DRid=doctor_payment.DRid order by doctor_payment.doctor_charge desc]]>
+	</queryString>
+	<field name="DRid" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DRid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="d_bankreport"/>
+	</field>
+	<field name="doctor_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="doctor_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="d_bankreport"/>
+	</field>
+	<field name="bank_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="bank_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="d_bankreport"/>
+	</field>
+	<field name="bank_accountNo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="bank_accountNo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="d_bankreport"/>
+	</field>
+	<field name="date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="d_bankreport"/>
+	</field>
+	<field name="Dpayid" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Dpayid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor_payment"/>
+	</field>
+	<field name="COLUMN_7" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DRid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor_payment"/>
+	</field>
+	<field name="patient_qty" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="patient_qty"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor_payment"/>
+	</field>
+	<field name="doctor_charge" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="doctor_charge"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor_payment"/>
+	</field>
+	<group name="DRid">
+		<groupExpression><![CDATA[$F{DRid}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="0" width="200" height="30" uuid="45288825-871a-40b3-99ed-bf19b8e8c89b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Doctor Information]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-6" y="48" width="61" height="30" uuid="2ad53049-5a30-42b5-82c3-d5d3e1c66633"/>
+				<text><![CDATA[DRid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="48" width="70" height="30" uuid="5a9ba998-e74f-4999-8821-4ed305498685"/>
+				<text><![CDATA[doctor name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="48" width="70" height="30" uuid="beb5475c-3081-4163-b037-71b36b69bfaf"/>
+				<text><![CDATA[bank name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="48" width="80" height="30" uuid="a24cacad-c263-4d84-9bc3-53be5b3e6d97"/>
+				<text><![CDATA[account No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="49" width="70" height="30" uuid="dcc58749-a1ec-40f6-8dcf-0803329fdf79"/>
+				<text><![CDATA[date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="48" width="50" height="30" uuid="cb28eb2c-e49c-41ab-8f6e-bdd032c2a89d"/>
+				<text><![CDATA[Dpayid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="48" width="50" height="30" uuid="8a35d57c-1f37-4bd4-9636-808911c36e9a"/>
+				<text><![CDATA[DRid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="48" width="52" height="30" uuid="80e9b04c-d3f5-4ea4-b605-5754e7f8b47f"/>
+				<text><![CDATA[qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="495" y="48" width="73" height="30" uuid="1fd91ffc-417d-4084-bcaa-9fa1eddfdb3d"/>
+				<text><![CDATA[charge]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="-5" y="-1" width="60" height="30" uuid="edb4c822-2fc4-45a9-8dcd-21db375b9e24"/>
+				<textFieldExpression><![CDATA[$F{DRid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="55" y="-1" width="70" height="30" uuid="09c1a595-6485-47ff-8834-d469f9d57a5e"/>
+				<textFieldExpression><![CDATA[$F{doctor_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="125" y="-1" width="70" height="30" uuid="61cb04a8-903f-4523-8ff7-d1f114dccecc"/>
+				<textFieldExpression><![CDATA[$F{bank_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="-1" width="80" height="30" uuid="98d0fc17-6a3e-4edd-9cc2-a9929f4b70be"/>
+				<textFieldExpression><![CDATA[$F{bank_accountNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="-1" width="70" height="30" uuid="33334b20-b37f-4a4d-bab3-f9ad61c25024"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="345" y="-1" width="50" height="30" uuid="5cf99e73-14b7-48b3-8920-d7006f01b74b"/>
+				<textFieldExpression><![CDATA[$F{Dpayid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="395" y="-1" width="50" height="30" uuid="dcb9bdd5-3373-471b-b667-403c70ee0dc6"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="-1" width="52" height="30" uuid="9b3fa155-b504-4417-9cd2-329bfd0c334f"/>
+				<textFieldExpression><![CDATA[$F{patient_qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="497" y="-1" width="71" height="30" uuid="3c0a8dbb-e926-49e2-a587-9ac5211c1b37"/>
+				<textFieldExpression><![CDATA[$F{doctor_charge}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="24" width="100" height="30" uuid="a63c5445-99ee-45b2-b802-debe19d6f1ff"/>
+				<text><![CDATA[make by shiran]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

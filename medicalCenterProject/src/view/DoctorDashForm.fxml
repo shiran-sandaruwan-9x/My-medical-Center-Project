@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="581.0" prefWidth="1098.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlle.DoctorDashFormController">
+   <children>
+      <Pane prefHeight="581.0" prefWidth="272.0" style="-fx-background-color: #A1E1F8;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="51.0" layoutY="46.0" onAction="#doctorAddOnAction" prefHeight="48.0" prefWidth="188.0" style="-fx-background-color: #E4A7FF; -fx-background-radius: 8;" text="doctor" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="51.0" layoutY="156.0" onAction="#doctorDetailsOnAction" prefHeight="48.0" prefWidth="188.0" style="-fx-background-color: #E4A7FF; -fx-background-radius: 8;" text="view" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="51.0" layoutY="267.0" onAction="#doctorPaymentOnAction" prefHeight="48.0" prefWidth="188.0" style="-fx-background-color: #E4A7FF; -fx-background-radius: 8;" text="PayMent" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="51.0" layoutY="442.0" onAction="#LogoutOnAction" prefHeight="48.0" prefWidth="188.0" style="-fx-background-color: #EEFFFE; -fx-background-radius: 8;" text="log-out">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="41.0" fitWidth="48.0" layoutX="56.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icon/pation/icons8-exit-40.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="setPane" layoutX="272.0" prefHeight="581.0" prefWidth="826.0">
+         <children>
+            <ImageView fitHeight="581.0" fitWidth="826.0" opacity="0.26" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/38-388050_beautiful-colour-combo-gu-in-2019-iphone-wallpaper.jpg" />
+               </image>
+            </ImageView>
+         </children></Pane>
+   </children>
+</AnchorPane>

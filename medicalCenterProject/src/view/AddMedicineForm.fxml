@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="578.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlle.AddMedicineFormController">
+   <children>
+      <ImageView fitHeight="578.0" fitWidth="1050.0" opacity="0.2" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/gradienta-LeG68PrXA6Y-unsplash.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="82.0" layoutY="64.0" prefHeight="17.0" prefWidth="114.0" text="Medicine_ID">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="144.0" text="Drug Details">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="254.0" text="Drug Qty ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="426.0" layoutY="144.0" text="Drug_UnitPrice ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtid" layoutX="187.0" layoutY="61.0" onKeyReleased="#txtIdOnKeyRelesed" prefHeight="31.0" prefWidth="139.0" styleClass="text-input">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtdrugQty" layoutX="187.0" layoutY="251.0" onKeyReleased="#txtQtyOnKeyRelesed" prefHeight="31.0" prefWidth="146.0" styleClass="text-input">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDrugPrice" layoutX="552.0" layoutY="141.0" onKeyReleased="#txtUnitPriceOnKeyRelesed" prefHeight="25.0" prefWidth="146.0" styleClass="text-input">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="84.0" layoutY="436.0" onAction="#AddOnAction" prefHeight="31.0" prefWidth="105.0" style="-fx-background-color: white;" text="paste">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="213.0" layoutY="436.0" onAction="#updateOnAction" prefHeight="31.0" prefWidth="105.0" style="-fx-background-color: white;" text="change">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextArea fx:id="txtdrugDetail" layoutX="187.0" layoutY="114.0" onKeyReleased="#txtDetailOnKeyRelesed" prefHeight="86.0" prefWidth="139.0" styleClass="text-input">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextArea>
+      <Label layoutX="426.0" layoutY="64.0" prefHeight="17.0" prefWidth="114.0" text="Drug name">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtdrugName" layoutX="552.0" layoutY="61.0" onKeyReleased="#txtNameOnKeyRelesed" prefHeight="25.0" prefWidth="146.0" styleClass="text-input">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <TableView fx:id="tblMedicine" layoutX="426.0" layoutY="200.0" prefHeight="200.0" prefWidth="607.0">
+        <columns>
+          <TableColumn fx:id="tblId" prefWidth="75.0" text="Medicine_ID" />
+          <TableColumn fx:id="tblName" prefWidth="101.0" text="Drug name" />
+            <TableColumn fx:id="tblDetails" prefWidth="181.0" text="Drug Details" />
+            <TableColumn fx:id="tblQty" prefWidth="66.0" text="Drug Qty " />
+            <TableColumn fx:id="tblPrice" prefWidth="110.0" text="Drug UnitPrice " />
+            <TableColumn fx:id="tblDelete" prefWidth="73.0" text="delete" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="341.0" layoutY="436.0" onAction="#clearOnAction" prefHeight="31.0" prefWidth="105.0" style="-fx-background-color: white;" text="clear">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="341.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/icon/icons8-housekeeper-50.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="213.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/icon/icons8-submit-progress-40.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="87.0" layoutY="439.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/icon/addCustomer.png" />
+         </image></ImageView>
+   </children>
+</AnchorPane>

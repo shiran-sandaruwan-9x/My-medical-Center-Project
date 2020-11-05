@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlle.DoctorViewFormController">
+   <children>
+      <ImageView fitHeight="581.0" fitWidth="826.0" opacity="0.2" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/gradienta-LeG68PrXA6Y-unsplash.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblBank" layoutX="13.0" layoutY="56.0" prefHeight="301.0" prefWidth="796.0">
+        <columns>
+          <TableColumn fx:id="colDReportId" prefWidth="82.0" text="D_ReportID" />
+          <TableColumn fx:id="colDname" prefWidth="102.0" text="doctor name" />
+            <TableColumn fx:id="colBname" prefWidth="107.0" text="bank name" />
+            <TableColumn fx:id="bankAccountNo" prefWidth="106.0" text="Bank Account No" />
+            <TableColumn fx:id="colDate" prefWidth="85.0" text="Date" />
+            <TableColumn fx:id="colDpayId" prefWidth="74.0" text="D_PayID" />
+            <TableColumn fx:id="colDrid" prefWidth="59.0" text="D_RID" />
+            <TableColumn fx:id="colQty" prefWidth="75.0" text="patient qty" />
+            <TableColumn fx:id="colCharge" prefWidth="103.0" text="D_Charge" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="645.0" layoutY="379.0" onAction="#printOnAction" prefHeight="47.0" prefWidth="164.0" style="-fx-background-color: #C3E2FE;" text="print">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

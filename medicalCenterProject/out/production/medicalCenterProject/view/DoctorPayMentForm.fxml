@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlle.DoctorPayMentFormController">
+   <children>
+      <ImageView fitHeight="581.0" fitWidth="826.0" opacity="0.16" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/gradienta-LeG68PrXA6Y-unsplash.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="62.0" layoutY="33.0" prefHeight="31.0" prefWidth="121.0" text="BankReport_ID ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="89.0" prefWidth="121.0" text="Doctor_Name">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="170.0" prefHeight="25.0" prefWidth="93.0" text="Bank_Name">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtBanakName" layoutX="220.0" layoutY="159.0" onKeyReleased="#txtBankNameOnKeyReleased" prefHeight="31.0" prefWidth="138.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="comDname" layoutX="64.0" layoutY="117.0" onAction="#comOnAction" prefHeight="25.0" prefWidth="105.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXComboBox>
+      <Label layoutX="59.0" layoutY="232.0" text="Bank_Account No">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAccountNo" layoutX="220.0" layoutY="217.0" onKeyReleased="#txtAccountOnKeyReleased" prefHeight="31.0" prefWidth="138.0" styleClass="text-input">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <Label layoutX="464.0" layoutY="31.0" prefHeight="31.0" prefWidth="164.0" text="Doctor_Payment_ID ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="466.0" layoutY="158.0" prefHeight="25.0" prefWidth="121.0" text="Patient_Qty">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="465.0" layoutY="89.0" text="Doctor_Charge">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtQty" layoutX="638.0" layoutY="143.0" onKeyReleased="#txtQtyOnKeyReleased" prefHeight="31.0" prefWidth="95.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="59.0" layoutY="275.0" prefHeight="31.0" prefWidth="84.0" text="Date">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="217.0" layoutY="275.0" prefHeight="31.0" prefWidth="105.0" text="2020-08-09">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblPayment" layoutX="59.0" layoutY="321.0" prefHeight="171.0" prefWidth="362.0">
+        <columns>
+          <TableColumn fx:id="colDpayId" prefWidth="81.0" text="DpayID" />
+          <TableColumn fx:id="colDrid" prefWidth="100.0" text="DRid" />
+            <TableColumn fx:id="colQty" prefWidth="93.0" text="On Of patient" />
+            <TableColumn fx:id="colCharge" prefWidth="85.0" text="Charge" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="466.0" layoutY="217.0" onAction="#docFullChargeOnAction" prefHeight="31.0" prefWidth="133.0" style="-fx-background-color: #1A353E;" text="Doc Full Charge" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="534.0" layoutY="321.0" onAction="#placePaymentOnAction" prefHeight="48.0" prefWidth="202.0" style="-fx-background-color: #67809F;" text="Place Payment" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblReportId" layoutX="220.0" layoutY="36.0" text="DR01">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDpayID" layoutX="638.0" layoutY="33.0" text="M002">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDname" layoutX="221.0" layoutY="89.0" text="select">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDocCharge" layoutX="638.0" layoutY="88.0" text="00.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="713.0" layoutY="86.0" text="Rs/=">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBalance" layoutX="644.0" layoutY="218.0" text="00.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="717.0" layoutY="218.0" text="Rs/=">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="634.0" layoutY="448.0" onAction="#printOnAction" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #C3E2FE;" text="pay sheet">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

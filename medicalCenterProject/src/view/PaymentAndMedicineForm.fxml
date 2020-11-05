@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="578.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlle.PaymentAndMedicineFormController">
+   <children>
+      <ImageView fitHeight="578.0" fitWidth="1050.0" opacity="0.2" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/gradienta-LeG68PrXA6Y-unsplash.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="62.0" layoutY="37.0" prefHeight="31.0" prefWidth="84.0" text="Pay ID ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="396.0" layoutY="35.0" prefHeight="17.0" prefWidth="114.0" text="Patient ID">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="111.0" text="Medicine_ID">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="176.0" text="Drug Name ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtDname" layoutX="181.0" layoutY="161.0" prefHeight="31.0" prefWidth="128.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="comPatientId" layoutX="397.0" layoutY="63.0" onAction="#setlblOnAction" prefHeight="25.0" prefWidth="84.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></JFXComboBox>
+      <JFXButton buttonType="RAISED" layoutX="820.0" layoutY="281.0" onAction="#addOnAction" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #1A353E;" text="add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="401.0" layoutY="120.0" text="Drug Qty ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="401.0" layoutY="188.0" text="Drug UnitPrice ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtDrugQty" layoutX="526.0" layoutY="105.0" onKeyReleased="#qtyOnKeyReleased" prefHeight="31.0" prefWidth="128.0" styleClass="text-input">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDrugUnitPrice" layoutX="526.0" layoutY="185.0" prefHeight="31.0" prefWidth="128.0" styleClass="text-input">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <Label layoutX="782.0" layoutY="35.0" text="Payment Type ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="784.0" layoutY="179.0" text="pay amount" textFill="#1a353e">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerTot" layoutX="905.0" layoutY="170.0" prefHeight="31.0" prefWidth="116.0" styleClass="text-input">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXComboBox fx:id="comPaymentType" layoutX="782.0" layoutY="66.0" onAction="#payTypeOnAction" prefHeight="25.0" prefWidth="112.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXComboBox>
+      <TableView fx:id="tblPlaceMedicine" layoutX="507.0" layoutY="324.0" prefHeight="143.0" prefWidth="515.0">
+        <columns>
+          <TableColumn fx:id="colPayid" prefWidth="91.0" text="Pay_ID " />
+          <TableColumn fx:id="colMid" prefWidth="77.0" text="Medicine_ID" />
+            <TableColumn fx:id="colDrugName" prefWidth="139.0" text="Drug_Name " />
+            <TableColumn fx:id="colMqty" prefWidth="109.0" text="Drug_Qty " />
+            <TableColumn fx:id="colMprice" prefWidth="96.0" text="Drug_UnitPrice " />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="638.0" layoutY="489.0" onAction="#placePaymentOnAction" prefHeight="48.0" prefWidth="202.0" style="-fx-background-color: #67809F;" text="Place Payment" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="887.0" layoutY="498.0" onAction="#printOnAction" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #C3E2FE;" text="print" textFill="#1a353e">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="783.0" layoutY="126.0" text="total amount" textFill="#1a353e">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtTotalamount" layoutX="906.0" layoutY="115.0" prefHeight="31.0" prefWidth="116.0" styleClass="text-input">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <Label layoutX="784.0" layoutY="232.0" text="balance      =" textFill="#1a353e">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtBlance" layoutX="902.0" layoutY="222.0" prefHeight="31.0" prefWidth="121.0" styleClass="text-input">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <Label fx:id="tblType" alignment="CENTER" layoutX="907.0" layoutY="35.0" prefHeight="25.0" prefWidth="112.0" text="type" textFill="#1a353e">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPatientId" alignment="TOP_LEFT" layoutX="526.0" layoutY="35.0" prefHeight="25.0" prefWidth="112.0" text="patient id" textFill="#1a353e">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblId" alignment="TOP_LEFT" layoutX="183.0" layoutY="113.0" prefHeight="25.0" prefWidth="112.0" text="medicine id" textFill="#1a353e">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblMedicine" layoutX="29.0" layoutY="324.0" prefHeight="143.0" prefWidth="457.0">
+        <columns>
+          <TableColumn fx:id="tblMid" prefWidth="63.0" text="mid" />
+          <TableColumn fx:id="tblDrugName" prefWidth="94.0" text="drugsname" />
+            <TableColumn fx:id="tblDrugDetail" prefWidth="128.0" text="drug_details" />
+            <TableColumn fx:id="tblDrugQty" prefWidth="69.0" text="drug_qty" />
+            <TableColumn fx:id="tblDrugPrice" prefWidth="102.0" text="price" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblPayId" layoutX="183.0" layoutY="40.0" text="payid" textFill="#1a353e">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="689.0" layoutY="125.0" onAction="#totOnAction" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: #1A353E;" text="=" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="935.0" layoutY="281.0" onAction="#removeOnAction" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #1A353E;" text="remove" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="689.0" layoutY="179.0" onAction="#balanceOnAction" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #1A353E;" text="balance" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="58.0" layoutY="234.0" prefWidth="121.0" text="Doctor_Name">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="comDname" layoutX="58.0" layoutY="259.0" onAction="#comOnAction" prefHeight="25.0" prefWidth="105.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXComboBox>
+      <Label fx:id="lblDname" layoutX="222.0" layoutY="231.0" text="name is">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="278.0" layoutY="271.0" text="this doctor charge" textFill="#1a353e">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCharge" layoutX="402.0" layoutY="268.0" text="00.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="477.0" layoutY="267.0" text="Rs//=">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="180.0" layoutY="231.0" text="Doc.">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

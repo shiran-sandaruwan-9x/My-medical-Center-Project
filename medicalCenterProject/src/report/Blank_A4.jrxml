@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="400" pageHeight="250" columnWidth="360" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8c02bb8c-718f-48de-9e50-01597113306a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+<!--	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>-->
+	<parameter name="type" class="java.lang.String"/>
+	<parameter name="amount" class="java.lang.Double"/>
+	<parameter name="balance" class="java.lang.Double"/>
+	<queryString language="SQL">
+		<![CDATA[select * from payment]]>
+	</queryString>
+	<field name="payid" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="payid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="Pid" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Pid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="payment_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="payment_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="balance" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="balance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<group name="payid">
+		<groupExpression><![CDATA[$F{payid}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="75" y="0" width="210" height="30" uuid="19fb2c88-e2cb-4995-9afc-4bed2da334ee"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Patient PayMent]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="92" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="10" width="100" height="30" uuid="12b2b9b6-b29e-41d4-a86d-2478d73cf02c"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="10" width="100" height="30" uuid="b4b222f4-90e6-4449-b662-aa87f7547a48"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="10" width="100" height="30" uuid="528a384c-ab7d-4866-98cb-8b525e1e244f"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="150" y="50" width="100" height="30" uuid="abe9e8e1-937d-4a0f-a2f1-2e7a81093169"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+					<paragraph lineSpacing="Fixed"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="50" width="100" height="30" uuid="9d764211-01b2-4f7c-a309-ebfec33369bd"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{balance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="50" width="100" height="30" uuid="cc5c2660-8eec-45d2-82cb-65fc7afa2465"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{type}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<summary>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="30" width="100" height="30" uuid="36710ea6-2c30-4688-8ca2-cef9575bb50a"/>
+				<text><![CDATA[make by shiran]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

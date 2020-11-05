@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="458.0" prefWidth="369.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlle.LoginFormController">
+   <children>
+      <ImageView fitHeight="458.0" fitWidth="369.0" opacity="0.48" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/gradienta-LeG68PrXA6Y-unsplash.jpg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="104.0" layoutY="83.0" prefHeight="37.0" prefWidth="165.0" promptText="user name" text="shiran" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="83.0" layoutY="296.0" onAction="#LoginOnAction" prefHeight="44.0" prefWidth="204.0" ripplerFill="WHITE" style="-fx-background-color: #F0BDDA; -fx-background-radius: 45;" text="Login" textOverrun="CLIP">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="147.0" layoutY="219.0" text="password" textFill="#176c80">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="txtPswd" labelFloat="true" layoutX="104.0" layoutY="176.0" prefHeight="37.0" prefWidth="165.0" promptText="password" text="1234" unFocusColor="#0a0a0a">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXPasswordField>
+      <ImageView fitHeight="30.0" fitWidth="55.0" layoutX="39.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="142.0" layoutY="127.0" prefHeight="17.0" prefWidth="85.0" text="user name" textFill="#176c80">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="246.0" layoutY="94.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/icon/login%20icon/admin.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="240.0" layoutY="183.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/icon/login%20icon/password.png" />
+         </image></ImageView>
+      <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="89.0" layoutY="304.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/icon/pation/icons8-change-user-40.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
